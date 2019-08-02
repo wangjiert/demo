@@ -1,0 +1,12 @@
+spring:
+#  profiles:
+#    active: node1
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/wangjiert/confrepo
+          search-paths: [/**]
+          basedir: target/config #这个目录需要为空，不然报错
